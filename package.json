@@ -1,0 +1,10 @@
+{
+  "name": "stevecampbell",
+  "private": true,
+  "description": "Steve Campbell Associates website — static site on Cloudflare Workers",
+  "scripts": {
+    "build": "python3 build/build.py",
+    "dev": "npx wrangler dev",
+    "deploy": "npx wrangler deploy"
+  }
+}
