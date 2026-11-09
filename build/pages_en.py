@@ -533,7 +533,7 @@ def privacy():
 <h2>Who we are</h2>
 <p>Steve Campbell Associates, {ADDRESS["street"]}, {ADDRESS["locality"]}, {ADDRESS["region"]} {ADDRESS["postcode"]}, United Kingdom, is the controller of personal data collected through this website. Contact: <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 <h2>What we collect and why</h2>
-<p><strong>Newsletter.</strong> If you subscribe, we collect your name, email address and, optionally, your company. We use them only to send our newsletter, on the basis of your consent. Our email service provider, MailerLite, stores and sends the newsletter on our behalf. Every email contains an unsubscribe link, and you can withdraw consent at any time.</p>
+<p><strong>Newsletter.</strong> If you subscribe, we collect your name, email address and, optionally, your company. We use them only to send our newsletter, on the basis of your consent. Our CRM and email provider, HubSpot, stores your details and sends the newsletter on our behalf. Every email contains an unsubscribe link, and you can withdraw consent at any time.</p>
 <p><strong>Enquiries.</strong> The contact form does not send data to us directly — it prepares an email in your own email application. When you email or call us, we use your details to respond to your enquiry and, if you instruct us, to carry out the work, on the basis of our legitimate interests or to take steps towards a contract.</p>
 <p><strong>Website operation.</strong> The site is hosted on Cloudflare, which processes technical data such as IP addresses to deliver the site securely. We do not use advertising or analytics cookies.</p>
 <h2>How long we keep data</h2>

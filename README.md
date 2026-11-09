@@ -12,7 +12,7 @@ Static, bilingual (en-GB / pt-PT) site for https://stevecampbellassociates.com, 
 | `build/build.py` | Generates `public/` — HTML pages, `sitemap.xml`, `robots.txt`, `llms.txt`, `_redirects`, `_headers` |
 | `public/` | The built site (committed, so Cloudflare deploys it without a build step) |
 | `public/assets/` | CSS, JS, images |
-| `src/worker.js` | Worker: `/api/subscribe` (newsletter → MailerLite); everything else is static |
+| `src/worker.js` | Worker: `/api/subscribe` (newsletter → HubSpot form); everything else is static |
 | `wrangler.jsonc` | Cloudflare configuration |
 
 ## Editing content
@@ -27,12 +27,14 @@ Static, bilingual (en-GB / pt-PT) site for https://stevecampbellassociates.com, 
 - Build command: *(leave empty)*
 - Deploy command: `npx wrangler deploy`
 
-## Newsletter (MailerLite)
+## Newsletter (HubSpot)
 
-Set in Worker → Settings → Variables and Secrets:
+Sign-ups are sent to a HubSpot form via the Forms API (no API key needed). Set in Worker → Settings → Variables and Secrets:
 
-- `MAILERLITE_API_KEY` (secret) — MailerLite → Integrations → MailerLite API
-- `MAILERLITE_GROUP_EN`, `MAILERLITE_GROUP_PT` (optional) — group IDs to separate English and Portuguese subscribers
+- `HUBSPOT_PORTAL_ID` — HubSpot account ID (Hub ID)
+- `HUBSPOT_FORM_ID` — GUID of the HubSpot form for English sign-ups (fields: email, firstname, company)
+- `HUBSPOT_FORM_ID_PT` (optional) — GUID of a separate form for Portuguese sign-ups
+- `HUBSPOT_SUBSCRIPTION_ID` (optional) — subscription type ID, only if the form has GDPR consent options enabled
 
 ## SEO and AI discoverability
 

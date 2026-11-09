@@ -19,7 +19,7 @@ SOCIAL = [
     ("Instagram", "https://www.instagram.com/steve_campbell_associates/"),
 ]
 POSTNOMS = "DipAdj FCIArb FFPWS MCIOB"
-VERSION = "20261109b"
+VERSION = "20261109c"
 
 ORG_ID = BASE + "/#organization"
 PERSON_ID = BASE + "/#steve-campbell"

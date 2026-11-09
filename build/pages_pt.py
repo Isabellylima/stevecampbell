@@ -222,7 +222,7 @@ def privacidade():
 <h2>Responsável pelo tratamento</h2>
 <p>Steve Campbell Associates, {ADDRESS["street"]}, {ADDRESS["locality"]}, {ADDRESS["region"]} {ADDRESS["postcode"]}, Reino Unido. Contacto: <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 <h2>Que dados recolhemos e para quê</h2>
-<p><strong>Newsletter.</strong> Se subscrever, recolhemos o seu nome, e-mail e, opcionalmente, a empresa, que usamos apenas para enviar a newsletter, com base no seu consentimento. O nosso fornecedor de e-mail, MailerLite, armazena e envia a newsletter em nosso nome. Todos os e-mails incluem um link para cancelar a subscrição e pode retirar o consentimento a qualquer momento.</p>
+<p><strong>Newsletter.</strong> Se subscrever, recolhemos o seu nome, e-mail e, opcionalmente, a empresa, que usamos apenas para enviar a newsletter, com base no seu consentimento. O nosso fornecedor de CRM e e-mail, HubSpot, armazena os seus dados e envia a newsletter em nosso nome. Todos os e-mails incluem um link para cancelar a subscrição e pode retirar o consentimento a qualquer momento.</p>
 <p><strong>Pedidos de contacto.</strong> O formulário de contacto não nos envia dados diretamente — prepara um e-mail na sua própria aplicação. Quando nos contacta, usamos os seus dados para responder e, se nos contratar, para realizar o trabalho.</p>
 <p><strong>Funcionamento do site.</strong> O site está alojado na Cloudflare, que trata dados técnicos como endereços IP para o disponibilizar com segurança. Não usamos cookies de publicidade nem de análise.</p>
 <h2>Os seus direitos</h2>

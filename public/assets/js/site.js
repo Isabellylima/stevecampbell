@@ -15,7 +15,7 @@
     });
   }
 
-  // Newsletter (MailerLite via /api/subscribe)
+  // Newsletter (HubSpot via /api/subscribe)
   document.querySelectorAll('form[data-newsletter]').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();

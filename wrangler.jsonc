@@ -14,6 +14,6 @@
   "observability": { "enabled": true }
   // Custom domain: add stevecampbellassociates.com in the dashboard
   // (Worker → Settings → Domains & Routes) once the domain's DNS is on Cloudflare.
-  // Secrets (dashboard or `npx wrangler secret put`): MAILERLITE_API_KEY
-  // Optional vars: MAILERLITE_GROUP_EN, MAILERLITE_GROUP_PT
+  // Newsletter (HubSpot) — set in the dashboard: HUBSPOT_PORTAL_ID, HUBSPOT_FORM_ID
+  // Optional: HUBSPOT_FORM_ID_PT, HUBSPOT_SUBSCRIPTION_ID
 }
