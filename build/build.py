@@ -59,7 +59,7 @@ Key facts:
 - Principal: Steve Campbell — Chartered Construction Manager, international arbitrator, construction adjudicator, mediator, expert witness and party wall surveyor.
 - More than 40 years in the construction industry: trades, site management, project management, construction director. Projects managed from about £10,000 to more than £80 million under JCT, NEC, FIDIC and bespoke contracts.
 - Working in dispute resolution since 2009; has appeared in the county court, the Technology and Construction Court, and in arbitrations, adjudications and mediations. Regularly selected as a third surveyor under the Party Wall etc. Act 1996.
-- Qualifications and memberships: DipAdj; Fellow, Chartered Institute of Arbitrators (FCIArb); Fellow, Faculty of Party Wall Surveyors (FFPWS); Member, Chartered Institute of Building (MCIOB); Founding Fellow, Party Wall Academy; Member, Society of Construction Law; Member, Adjudication Society; Member, Pyramus and Thisbe Society.
+- Qualifications and memberships: DipAdj; Fellow, Chartered Institute of Arbitrators (FCIArb); Fellow and Vice President, Faculty of Party Wall Surveyors (FFPWS), and its director responsible for training and education; Member, Chartered Institute of Building (MCIOB); Founding Fellow, Party Wall Academy; Member, Society of Construction Law; Member, Adjudication Society.
 - Acts either as an independent appointee (adjudicator, arbitrator, mediator, expert determiner, third surveyor) or as adviser/representative for one party — never both on the same matter.
 - Clients: main contractors, subcontractors, house builders, developers, property owners, building and adjoining owners, architects, engineers, surveyors, solicitors, barristers and insurers.
 - Free, confidential initial consultation.

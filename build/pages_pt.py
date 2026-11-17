@@ -133,12 +133,11 @@ def sobre():
 <ul class="checklist">
 <li>Diploma em Adjudication (DipAdj)</li>
 <li>Fellow, Chartered Institute of Arbitrators (FCIArb)</li>
-<li>Fellow, Faculty of Party Wall Surveyors (FFPWS)</li>
+<li>Fellow e Vice-Presidente, Faculty of Party Wall Surveyors (FFPWS)</li>
 <li>Membro, Chartered Institute of Building (MCIOB)</li>
 <li>Founding Fellow, Party Wall Academy</li>
 <li>Membro, Society of Construction Law</li>
 <li>Membro, Adjudication Society</li>
-<li>Membro, Pyramus and Thisbe Society</li>
 </ul>
 <div class="actions"><a class="btn" href="/pt/contacto/">Contactar o Steve</a><a class="btn ghost" href="{SOCIAL[0][1]}" rel="me noopener" target="_blank">LinkedIn</a></div>
 </div>

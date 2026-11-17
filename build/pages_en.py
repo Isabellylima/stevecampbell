@@ -72,7 +72,7 @@ def home():
 
 <section class="section-alt"><div class="wrap split">
 <div><p class="eyebrow">Experience</p><h2>Practical construction knowledge behind every decision</h2>
-<p>Steve began his career building houses, extensions and commercial units, then progressed through site management, project management and construction direction. He has managed projects from around £10,000 to more than £80 million, under JCT, NEC, FIDIC and bespoke contracts, and is known for taking on difficult and distressed projects.</p>
+<p>Steve began his career building houses, extensions and commercial units, then progressed through site management and project management to construction director. He has managed projects from around £10,000 to more than £80 million, under JCT, NEC, FIDIC and bespoke contracts, and is known for taking on difficult and distressed projects.</p>
 <p>Since 2009 he has worked in dispute resolution as an adjudicator, arbitrator, mediator, party representative and expert witness, in the county court, the Technology and Construction Court, and in arbitrations, adjudications and mediations. He is regularly appointed as a third surveyor in party wall matters.</p>
 <p><a href="/about/">More about Steve →</a></p></div>
 <div><div class="stats">
@@ -82,7 +82,7 @@ def home():
 <div class="stat"><b style="font-size:1.15rem">JCT · NEC · FIDIC</b><span>and bespoke contracts</span></div>
 </div>
 <h3 style="margin-top:34px">Professional bodies</h3>
-<ul class="checklist"><li>Fellow, Chartered Institute of Arbitrators (FCIArb)</li><li>Fellow, Faculty of Party Wall Surveyors (FFPWS)</li><li>Member, Chartered Institute of Building (MCIOB)</li><li>Founding Fellow, Party Wall Academy</li><li>Member, Society of Construction Law</li><li>Member, Adjudication Society</li><li>Member, Pyramus and Thisbe Society</li></ul>
+<ul class="checklist"><li>Fellow, Chartered Institute of Arbitrators (FCIArb)</li><li>Fellow and Vice President, Faculty of Party Wall Surveyors (FFPWS)</li><li>Member, Chartered Institute of Building (MCIOB)</li><li>Founding Fellow, Party Wall Academy</li><li>Member, Society of Construction Law</li><li>Member, Adjudication Society</li></ul>
 </div></div></section>
 
 <section><div class="wrap split">
@@ -228,7 +228,7 @@ def party_wall():
 <p>The surveyors will normally award that their reasonable fees are paid by the building owner undertaking the work.</p>
 
 <h2>How Steve can help</h2>
-<p>Steve is a Fellow of the Faculty of Party Wall Surveyors and a Founding Fellow of the Party Wall Academy, and is regularly selected as a third surveyor. He accepts appointments as <strong>building owner's surveyor</strong>, <strong>adjoining owner's surveyor</strong>, <strong>agreed surveyor</strong> and <strong>third surveyor</strong>, and advises owners and fellow surveyors on notices, jurisdiction, awards, damage and compensation.</p>
+<p>Steve is a Fellow and Vice President of the Faculty of Party Wall Surveyors, and the director responsible for training and education for its members: he writes its training courses, articles and blogs and teaches members in the classroom. He is also a Founding Fellow of the Party Wall Academy and is regularly selected as a third surveyor. He accepts appointments as <strong>building owner's surveyor</strong>, <strong>adjoining owner's surveyor</strong>, <strong>agreed surveyor</strong> and <strong>third surveyor</strong>, and advises owners and fellow surveyors on notices, jurisdiction, awards, damage and compensation.</p>
 '''
     faqs = [
         ("Do I need a party wall agreement for my extension?",
@@ -282,7 +282,7 @@ def mediation():
 
 def other_adr():
     body = '''<h2>Expert determination</h2>
-<p>In expert determination the parties agree to appoint an independent expert to answer a particular question or decide a particular dispute, and to be bound by the expert's decision. It is contractual — it exists only because the parties have agreed to it — and is usually fast, private and final, with very limited grounds for challenge.</p>
+<p>In expert determination the parties agree to appoint an independent expert to answer a particular question or decide a particular dispute, and to be bound by the expert's decision. It is contractual, because the parties have agreed to it, and is usually fast, private and final, with very limited grounds for challenge.</p>
 <p>The key feature is that the expert can use their own knowledge and experience to investigate the question, rather than deciding only on the evidence presented, as a judge or arbitrator must. That makes it well suited to narrow technical or valuation questions, for example:</p>
 <ul class="checklist"><li>Whether work has reached completion or a certificate should be issued</li><li>The value of a variation or a final account item</li><li>Whether remedial work is required, and its scope</li><li>Measurement and quantum disputes</li></ul>
 <p>Expert determination works best when the contract defines which questions can be referred, to whom, and on what timetable.</p>
@@ -383,7 +383,7 @@ def about():
 <p>Since 2009 Steve has concentrated on construction and property dispute resolution. He acts as adjudicator, arbitrator, mediator, party representative and expert witness, and has appeared in the county court, the Technology and Construction Court, and in arbitrations, adjudications and mediations.</p>
 <p>He arbitrates and adjudicates disputes between clients and contractors, clients and professional consultants, and contractors and subcontractors, and is regularly selected as a third surveyor in party wall matters.</p>
 <h2>Teaching and writing</h2>
-<p>Steve lectures and writes on party wall and boundary matters, arbitration, adjudication, jurisdiction, easements and occupiers' liability, and has presented seminars to construction and property professionals.</p>
+<p>As Vice President of the Faculty of Party Wall Surveyors and its director responsible for training and education, Steve writes the Faculty's training courses, articles and blogs and teaches its members in the classroom. He also lectures and writes on party wall and boundary matters, arbitration, adjudication, jurisdiction, easements and occupiers' liability, and has presented seminars to construction and property professionals.</p>
 <h2>Approach</h2>
 <p>The crest of the practice carries the motto <em>sine timore vel favore</em> — without fear or favour. Whether appointed independently or instructed by one party, Steve's aim is the same: to understand the building, the people who built it and the commercial pressures on them, and to reach a clear, practical answer.</p>
 </div>
@@ -397,12 +397,12 @@ def about():
 <ul class="checklist">
 <li>Diploma in Adjudication (DipAdj)</li>
 <li>Fellow, Chartered Institute of Arbitrators (FCIArb)</li>
-<li>Fellow, Faculty of Party Wall Surveyors (FFPWS)</li>
+<li>Fellow and Vice President, Faculty of Party Wall Surveyors (FFPWS)</li>
 <li>Member, Chartered Institute of Building (MCIOB)</li>
 <li>Founding Fellow, Party Wall Academy</li>
 <li>Member, Society of Construction Law</li>
 <li>Member, Adjudication Society</li>
-<li>Member, Pyramus and Thisbe Society</li>
+
 </ul>
 <div class="actions"><a class="btn" href="/contact/">Contact Steve</a><a class="btn ghost" href="{SOCIAL[0][1]}" rel="me noopener" target="_blank">LinkedIn profile</a></div>
 </div>

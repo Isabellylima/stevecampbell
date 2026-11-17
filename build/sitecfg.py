@@ -19,7 +19,7 @@ SOCIAL = [
     ("Instagram", "https://www.instagram.com/steve_campbell_associates/"),
 ]
 POSTNOMS = "DipAdj FCIArb FFPWS MCIOB"
-VERSION = "20261109c"
+VERSION = "20261117"
 
 ORG_ID = BASE + "/#organization"
 PERSON_ID = BASE + "/#steve-campbell"
@@ -34,7 +34,7 @@ SERVICES_EN = [
      "Building owner's, adjoining owner's, agreed and third surveyor appointments under the Party Wall etc. Act 1996."),
     ("mediation", "Mediation",
      "Confidential, facilitated negotiation for construction, commercial and property disputes, before or during proceedings."),
-    ("expert-determination-and-early-neutral-evaluation", "Expert Determination & ENE",
+    ("expert-determination-and-early-neutral-evaluation", "Expert Determination & Early Neutral Evaluation (ENE)",
      "Fast, binding expert decisions on defined technical questions, and non-binding early evaluations of the merits."),
     ("expert-witness", "Expert Witness",
      "Independent construction expert evidence for the courts, arbitration and adjudication, prepared under CPR Part 35."),
@@ -113,7 +113,6 @@ def person_schema():
             {"@type": "Organization", "name": "Chartered Institute of Building", "url": "https://www.ciob.org/"},
             {"@type": "Organization", "name": "Society of Construction Law", "url": "https://www.scl.org.uk/"},
             {"@type": "Organization", "name": "Adjudication Society", "url": "https://www.adjudication.org/"},
-            {"@type": "Organization", "name": "Pyramus and Thisbe Society"},
             {"@type": "Organization", "name": "Party Wall Academy"},
         ],
         "knowsAbout": ["Construction adjudication", "Arbitration", "Party wall surveying", "Mediation",
