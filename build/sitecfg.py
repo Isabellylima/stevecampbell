@@ -18,8 +18,15 @@ SOCIAL = [
     ("Facebook", "https://www.facebook.com/SteveCampbellAssociates/"),
     ("Instagram", "https://www.instagram.com/steve_campbell_associates/"),
 ]
+ICONS = {
+    "LinkedIn": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg>',
+    "Facebook": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.87.25-1.46 1.5-1.46h1.55V4.47A20.6 20.6 0 0 0 14.3 4.3c-2.24 0-3.8 1.37-3.8 3.9v2.3H8v3h2.5V21z"/></svg>',
+    "Instagram": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.2A4.8 4.8 0 1 0 12 16.8 4.8 4.8 0 0 0 12 7.2zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2zM17.1 5.8a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2zM12 3c-2.44 0-2.75.01-3.71.05C5.03 3.2 3.2 5.02 3.05 8.29 3.01 9.25 3 9.56 3 12s.01 2.75.05 3.71c.15 3.27 1.98 5.09 5.24 5.24.96.04 1.27.05 3.71.05s2.75-.01 3.71-.05c3.26-.15 5.09-1.97 5.24-5.24.04-.96.05-1.27.05-3.71s-.01-2.75-.05-3.71C20.8 5.03 18.97 3.2 15.71 3.05 14.75 3.01 14.44 3 12 3zm0 1.62c2.4 0 2.69.01 3.64.05 2.44.11 3.58 1.27 3.69 3.69.04.95.05 1.24.05 3.64s-.01 2.69-.05 3.64c-.11 2.42-1.25 3.58-3.69 3.69-.95.04-1.23.05-3.64.05s-2.69-.01-3.64-.05c-2.45-.11-3.58-1.27-3.69-3.69-.04-.95-.05-1.24-.05-3.64s.01-2.69.05-3.64c.11-2.42 1.25-3.58 3.69-3.69.95-.04 1.24-.05 3.64-.05z"/></svg>',
+}
+IMPLEMENT_URL = "https://heyimplement.com/"
+
 POSTNOMS = "DipAdj FCIArb FFPWS MCIOB"
-VERSION = "20261117"
+VERSION = "20261117b"
 
 ORG_ID = BASE + "/#organization"
 PERSON_ID = BASE + "/#steve-campbell"
@@ -250,7 +257,10 @@ def newsletter(lang):
 
 
 def footer(lang):
-    social = "".join(f'<li><a href="{u}" rel="me noopener" target="_blank">{n}</a></li>' for n, u in SOCIAL)
+    social = '<div class="social">' + "".join(
+        f'<a href="{u}" rel="me noopener" target="_blank" aria-label="Steve Campbell Associates on {n}" title="{n}">{ICONS[n]}</a>'
+        for n, u in SOCIAL) + '</div>'
+    made = f'<a class="made-by" href="{IMPLEMENT_URL}" target="_blank" rel="noopener">Made by Implement</a>'
     addr = f'{ADDRESS["street"]}<br>{ADDRESS["locality"]}, {ADDRESS["region"]}<br>{ADDRESS["postcode"]}, United Kingdom'
     if lang == "en":
         svc = "".join(f'<li><a href="/services/{s}/">{n}</a></li>' for s, n, _ in SERVICES_EN)
@@ -259,18 +269,18 @@ def footer(lang):
 <div class="footer-brand"><img src="/assets/img/crest-white-96.png" width="70" height="70" alt="Steve Campbell Associates crest"><p><strong style="color:#fff">Steve Campbell Associates</strong><br>Chartered building consultancy and specialist dispute resolution practice.</p><p><em>Sine timore vel favore</em> — without fear or favour.</p></div>
 <div><h3>Services</h3><ul>{svc}</ul></div>
 <div><h3>Practice</h3><ul><li><a href="/about/">About Steve Campbell</a></li><li><a href="/portugal/">Clients in Portugal</a></li><li><a href="/e-book/">Free e-book</a></li><li><a href="/contact/">Contact</a></li><li><a href="/privacy/">Privacy notice</a></li><li><a href="/pt/" hreflang="pt-PT">Português</a></li></ul></div>
-<div><h3>Contact</h3><ul><li><a href="{PHONE_HREF}">{PHONE}</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li><li>{addr}</li></ul><h3 style="margin-top:18px">Follow</h3><ul>{social}</ul></div>
+<div><h3>Contact</h3><ul><li><a href="{PHONE_HREF}">{PHONE}</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li><li>{addr}</li></ul><h3 style="margin-top:18px">Follow</h3>{social}</div>
 </div>
-<div class="footer-bottom"><span>© 2026 Steve Campbell Associates. All rights reserved.</span><span>Information on this website is general guidance, not legal advice for a specific matter.</span></div>
+<div class="footer-bottom"><span>© 2026 Steve Campbell Associates. All rights reserved.</span><span>Information on this website is general guidance, not legal advice for a specific matter.</span><span>{made}</span></div>
 </div></footer>'''
     return f'''<footer class="site-footer"><div class="wrap">
 <div class="footer-grid">
 <div class="footer-brand"><img src="/assets/img/crest-white-96.png" width="70" height="70" alt="Brasão Steve Campbell Associates"><p><strong style="color:#fff">Steve Campbell Associates</strong><br>Consultoria de construção e prática especializada em resolução de litígios.</p><p><em>Sine timore vel favore</em> — sem medo nem favor.</p></div>
 <div><h3>Serviços</h3><ul><li><a href="/pt/servicos/#arbitragem">Arbitragem</a></li><li><a href="/pt/servicos/#mediacao">Mediação</a></li><li><a href="/pt/servicos/#peritagem">Perito independente</a></li><li><a href="/pt/servicos/#consultoria">Consultoria e reclamações</a></li><li><a href="/pt/servicos/#reino-unido">Litígios no Reino Unido</a></li></ul></div>
 <div><h3>Empresa</h3><ul><li><a href="/pt/sobre/">Sobre o Steve Campbell</a></li><li><a href="/pt/e-book/">E-book gratuito</a></li><li><a href="/pt/contacto/">Contacto</a></li><li><a href="/pt/privacidade/">Política de privacidade</a></li><li><a href="/" hreflang="en-GB">English</a></li></ul></div>
-<div><h3>Contacto</h3><ul><li><a href="{PHONE_HREF}">{PHONE}</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li><li>{addr.replace("United Kingdom", "Reino Unido")}</li></ul><h3 style="margin-top:18px">Redes</h3><ul>{social}</ul></div>
+<div><h3>Contacto</h3><ul><li><a href="{PHONE_HREF}">{PHONE}</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li><li>{addr.replace("United Kingdom", "Reino Unido")}</li></ul><h3 style="margin-top:18px">Redes sociais</h3>{social}</div>
 </div>
-<div class="footer-bottom"><span>© 2026 Steve Campbell Associates. Todos os direitos reservados.</span><span>A informação deste site é de carácter geral e não constitui aconselhamento jurídico.</span></div>
+<div class="footer-bottom"><span>© 2026 Steve Campbell Associates. Todos os direitos reservados.</span><span>A informação deste site é de carácter geral e não constitui aconselhamento jurídico.</span><span>{made}</span></div>
 </div></footer>'''
 
 
