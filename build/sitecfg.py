@@ -26,7 +26,7 @@ ICONS = {
 IMPLEMENT_URL = "https://heyimplement.com/"
 
 POSTNOMS = "DipAdj FCIArb FFPWS MCIOB"
-VERSION = "20261118c"
+VERSION = "20261118d"
 
 ORG_ID = BASE + "/#organization"
 PERSON_ID = BASE + "/#steve-campbell"
@@ -203,6 +203,8 @@ def page_hero(title, lead, crumbs, eyebrow=None):
 
 # ---------- Header / footer ----------
 
+BLOG_LANGS = set()  # filled by build.py with languages that have published posts
+
 NAV = {
     "en": [("/services/", "Services"), ("/about/", "About Steve"), ("/portugal/", "Portugal"), ("/e-book/", "E-book")],
     "pt": [("/pt/servicos/", "Serviços"), ("/pt/sobre/", "Sobre o Steve"), ("/pt/e-book/", "E-book")],
@@ -211,7 +213,10 @@ NAV = {
 
 def header(lang, path, alt_path):
     items = []
-    for href, label in NAV[lang]:
+    nav_items = list(NAV[lang])
+    if lang in BLOG_LANGS:
+        nav_items.insert(len(nav_items) - 1, ("/blog/" if lang == "en" else "/pt/blog/", "Blog"))
+    for href, label in nav_items:
         cur = ' aria-current="page"' if path == href or (href != "/" and path.startswith(href) and href.count("/") > 1 and path != "/") else ""
         items.append(f'<a href="{href}"{cur}>{label}</a>')
     if lang == "en":
@@ -302,7 +307,7 @@ def footer(lang):
 <div class="footer-grid">
 <div class="footer-brand"><img src="/assets/img/crest-white-96.png" width="70" height="70" alt="Steve Campbell Associates crest"><p><strong style="color:#fff">Steve Campbell Associates</strong><br>Chartered building consultancy and specialist dispute resolution practice.</p><p><em>Sine timore vel favore</em> — without fear or favour.</p></div>
 <div><h3>Services</h3><ul>{svc}</ul></div>
-<div><h3>Practice</h3><ul><li><a href="/about/">About Steve Campbell</a></li><li><a href="/portugal/">Clients in Portugal</a></li><li><a href="/e-book/">Free e-book</a></li><li><a href="/contact/">Contact</a></li><li><a href="/privacy/">Privacy notice</a></li><li><a href="/pt/" hreflang="pt-PT">Português</a></li></ul></div>
+<div><h3>Practice</h3><ul><li><a href="/about/">About Steve Campbell</a></li><li><a href="/portugal/">Clients in Portugal</a></li><li><a href="/e-book/">Free e-book</a></li>{'<li><a href="/blog/">Blog</a></li>' if "en" in BLOG_LANGS else ""}<li><a href="/contact/">Contact</a></li><li><a href="/privacy/">Privacy notice</a></li><li><a href="/pt/" hreflang="pt-PT">Português</a></li></ul></div>
 <div><h3>Contact</h3><ul><li><a href="{PHONE_HREF}">{PHONE}</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li><li>{addr}</li></ul><h3 style="margin-top:18px">Follow</h3>{social}</div>
 </div>
 <div class="footer-bottom"><span>© 2026 Steve Campbell Associates. All rights reserved.</span><span>Information on this website is general guidance, not legal advice for a specific matter.</span><span>{made}</span></div>
@@ -311,7 +316,7 @@ def footer(lang):
 <div class="footer-grid">
 <div class="footer-brand"><img src="/assets/img/crest-white-96.png" width="70" height="70" alt="Brasão Steve Campbell Associates"><p><strong style="color:#fff">Steve Campbell Associates</strong><br>Consultoria de construção e prática especializada em resolução de litígios.</p><p><em>Sine timore vel favore</em> — sem medo nem favor.</p></div>
 <div><h3>Serviços</h3><ul><li><a href="/pt/servicos/#arbitragem">Arbitragem</a></li><li><a href="/pt/servicos/#mediacao">Mediação</a></li><li><a href="/pt/servicos/#peritagem">Perito independente</a></li><li><a href="/pt/servicos/#consultoria">Consultoria e reclamações</a></li><li><a href="/pt/servicos/#reino-unido">Litígios no Reino Unido</a></li></ul></div>
-<div><h3>Empresa</h3><ul><li><a href="/pt/sobre/">Sobre o Steve Campbell</a></li><li><a href="/pt/e-book/">E-book gratuito</a></li><li><a href="/pt/contacto/">Contacto</a></li><li><a href="/pt/privacidade/">Política de privacidade</a></li><li><a href="/" hreflang="en-GB">English</a></li></ul></div>
+<div><h3>Empresa</h3><ul><li><a href="/pt/sobre/">Sobre o Steve Campbell</a></li><li><a href="/pt/e-book/">E-book gratuito</a></li>{'<li><a href="/pt/blog/">Blog</a></li>' if "pt" in BLOG_LANGS else ""}<li><a href="/pt/contacto/">Contacto</a></li><li><a href="/pt/privacidade/">Política de privacidade</a></li><li><a href="/" hreflang="en-GB">English</a></li></ul></div>
 <div><h3>Contacto</h3><ul><li><a href="{PHONE_HREF}">{PHONE}</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li><li>{addr.replace("United Kingdom", "Reino Unido")}</li></ul><h3 style="margin-top:18px">Redes sociais</h3>{social}</div>
 </div>
 <div class="footer-bottom"><span>© 2026 Steve Campbell Associates. Todos os direitos reservados.</span><span>A informação deste site é de carácter geral e não constitui aconselhamento jurídico.</span><span>{made}</span></div>
@@ -342,6 +347,7 @@ def layout(*, lang, path, title, description, body, alternates=None, schemas=(),
 <meta name="description" content="{esc(description)}">
 {robots}
 <link rel="canonical" href="{canonical}">
+<link rel="alternate" type="application/rss+xml" title="Steve Campbell Associates — Blog" href="{BASE}{"/pt/feed.xml" if lang == "pt" else "/feed.xml"}">
 {alt_links}
 <meta name="theme-color" content="#4b167f">
 <meta property="og:type" content="{og_type}">

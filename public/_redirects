@@ -5,11 +5,12 @@
 /ebook /e-book/ 301
 /ebook/ /e-book/ 301
 /steve-campbell-cv.pdf /about/ 302
-/blog /services/ 301
-/blog/ /services/ 301
-/blog/* /services/ 301
-/feed /  301
-/feed/ / 301
+/blog /blog/ 301
+/feed /feed.xml 301
+/feed/ /feed.xml 301
+/comments/feed/ /feed.xml 301
+/pt/feed /pt/feed.xml 301
+/pt/feed/ /pt/feed.xml 301
 /wp-admin/* / 301
 /wp-login.php / 301
 /wp-content/* / 301

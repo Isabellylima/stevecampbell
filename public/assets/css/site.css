@@ -230,3 +230,10 @@ button[disabled]{opacity:.6;cursor:wait}
 .consent{display:block;position:relative;padding-left:26px}
 .consent input{position:absolute;left:0;top:4px;margin:0}
 .nl-popup h2:focus{outline:none}
+/* Blog */
+.author-box{display:flex;gap:18px;align-items:flex-start;border-top:1px solid var(--line);margin-top:36px;padding-top:26px}
+.author-box img{width:72px;height:72px;border-radius:50%;object-fit:cover;flex:none}
+.author-box p{margin:.3em 0 .5em;font-size:.95rem;color:var(--muted)}
+.prose blockquote{border-left:4px solid var(--purple-200);margin:1.4em 0;padding:4px 0 4px 18px;color:var(--muted);font-style:italic}
+.prose img{border-radius:8px;margin:1.4em 0}
+.author-box picture{flex:none;width:72px}

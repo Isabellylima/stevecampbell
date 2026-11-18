@@ -3,6 +3,7 @@ import os, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from sitecfg import BASE, EBOOK_URL, PHONE, EMAIL, ADDRESS, POSTNOMS, SERVICES_EN, layout
 import pages_en, pages_pt
+import sitecfg, blog
 
 ROOT = os.path.join(os.path.dirname(__file__), "..", "public")
 LASTMOD = "2026-11-09"
@@ -15,7 +16,13 @@ def write(rel, content):
         f.write(content)
 
 
-pages = pages_en.all_pages() + pages_pt.all_pages()
+posts = blog.load_posts(include_drafts=os.environ.get("BLOG_DRAFTS") == "1")
+sitecfg.BLOG_LANGS.update(p["lang"] for p in posts)
+pages = (pages_en.all_pages() + pages_pt.all_pages()
+         + [blog.index_page("en", posts), blog.index_page("pt", posts)]
+         + [blog.article_page(p) for p in posts])
+write("feed.xml", blog.rss("en", posts))
+write("pt/feed.xml", blog.rss("pt", posts))
 indexable = []
 for p in pages:
     html = layout(**p)
@@ -77,12 +84,16 @@ Key facts:
 ## Resources
 - [Free e-book]({BASE}/e-book/): Guide to the Party Wall etc. Act 1996, adjudication, mediation, expert determination, arbitration and expert witnesses (PDF: {EBOOK_URL}).
 
+## Blog
+- [Blog]({BASE}/blog/): Articles by Steve Campbell. RSS: {BASE}/feed.xml
+{{BLOGLIST}}
 ## Português
 - [Página inicial em português]({BASE}/pt/): Arbitragem internacional, mediação, peritagem e consultoria de construção para empresas e investidores em Portugal.
 - [Serviços]({BASE}/pt/servicos/)
 - [Sobre o Steve Campbell]({BASE}/pt/sobre/)
 - [Contacto]({BASE}/pt/contacto/)
 """
+llms = llms.replace("{BLOGLIST}", "\n".join(f"- [{p['title']}]({BASE}{p['path']}): {p['description']}" for p in posts))
 write("llms.txt", llms)
 
 # ---- _redirects: old WordPress URLs → new pages ----
@@ -93,11 +104,12 @@ write("_redirects", f"""/contact-us /contact/ 301
 /ebook /e-book/ 301
 /ebook/ /e-book/ 301
 /steve-campbell-cv.pdf /about/ 302
-/blog /services/ 301
-/blog/ /services/ 301
-/blog/* /services/ 301
-/feed /  301
-/feed/ / 301
+/blog /blog/ 301
+/feed /feed.xml 301
+/feed/ /feed.xml 301
+/comments/feed/ /feed.xml 301
+/pt/feed /pt/feed.xml 301
+/pt/feed/ /pt/feed.xml 301
 /wp-admin/* / 301
 /wp-login.php / 301
 /wp-content/* / 301
@@ -129,6 +141,12 @@ write("_headers", """https://:sub.workers.dev/*
 
 /llms.txt
   Content-Type: text/plain; charset=utf-8
+
+/feed.xml
+  Content-Type: application/rss+xml; charset=utf-8
+
+/pt/feed.xml
+  Content-Type: application/rss+xml; charset=utf-8
 """)
 
 print(f"Built {len(pages)} pages ({len(indexable)} indexable) into public/")
