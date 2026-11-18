@@ -58,7 +58,7 @@ def home():
 <p class="motto">Sine timore vel favore — without fear or favour</p>
 </div>
 <div class="profile-card">
-<picture><source srcset="/assets/img/steve-campbell.webp" type="image/webp"><img src="/assets/img/steve-campbell.jpg" width="120" height="120" alt="Steve Campbell, principal of Steve Campbell Associates" fetchpriority="high"></picture>
+<picture><source srcset="/assets/img/steve-campbell-2026.webp" type="image/webp"><img src="/assets/img/steve-campbell-2026.jpg" width="120" height="120" alt="Steve Campbell, principal of Steve Campbell Associates" fetchpriority="high"></picture>
 <h2>Steve Campbell</h2><p class="post">{POSTNOMS}</p>
 <ul><li>Chartered Construction Manager</li><li>International Arbitrator &amp; Construction Adjudicator</li><li>Party Wall Surveyor &amp; Third Surveyor</li><li>Mediator &amp; Expert Witness</li></ul>
 </div>
@@ -389,7 +389,7 @@ def about():
 </div>
 <div>
 <div class="profile-card" style="box-shadow:none;border:1px solid var(--line)">
-<picture><source srcset="/assets/img/steve-campbell.webp" type="image/webp"><img src="/assets/img/steve-campbell.jpg" width="120" height="120" alt="Steve Campbell"></picture>
+<picture><source srcset="/assets/img/steve-campbell-2026.webp" type="image/webp"><img src="/assets/img/steve-campbell-2026.jpg" width="120" height="120" alt="Steve Campbell"></picture>
 <h2>Steve Campbell</h2><p class="post">{POSTNOMS}</p>
 <ul>
 <li>Chartered Construction Manager</li><li>International Arbitrator</li><li>Construction Adjudicator</li><li>Mediator</li><li>Expert Witness</li><li>Party Wall Surveyor &amp; Third Surveyor</li></ul></div>

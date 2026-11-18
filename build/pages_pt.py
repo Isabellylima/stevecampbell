@@ -26,7 +26,7 @@ def home():
 <p class="motto">Sine timore vel favore — sem medo nem favor</p>
 </div>
 <div class="profile-card">
-<picture><source srcset="/assets/img/steve-campbell.webp" type="image/webp"><img src="/assets/img/steve-campbell.jpg" width="120" height="120" alt="Steve Campbell, diretor da Steve Campbell Associates" fetchpriority="high"></picture>
+<picture><source srcset="/assets/img/steve-campbell-2026.webp" type="image/webp"><img src="/assets/img/steve-campbell-2026.jpg" width="120" height="120" alt="Steve Campbell, diretor da Steve Campbell Associates" fetchpriority="high"></picture>
 <h2>Steve Campbell</h2><p class="post">{POSTNOMS}</p>
 <ul><li>Gestor de Construção certificado (Chartered)</li><li>Árbitro internacional</li><li>Mediador e perito</li><li>Adjudicator e Party Wall Surveyor (Reino Unido)</li></ul>
 </div>
@@ -127,7 +127,7 @@ def sobre():
 </div>
 <div>
 <div class="profile-card" style="box-shadow:none;border:1px solid var(--line)">
-<picture><source srcset="/assets/img/steve-campbell.webp" type="image/webp"><img src="/assets/img/steve-campbell.jpg" width="120" height="120" alt="Steve Campbell"></picture>
+<picture><source srcset="/assets/img/steve-campbell-2026.webp" type="image/webp"><img src="/assets/img/steve-campbell-2026.jpg" width="120" height="120" alt="Steve Campbell"></picture>
 <h2>Steve Campbell</h2><p class="post">{POSTNOMS}</p></div>
 <h3 style="margin-top:30px">Qualificações e associações</h3>
 <ul class="checklist">

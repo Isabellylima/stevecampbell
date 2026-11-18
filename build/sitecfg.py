@@ -113,7 +113,7 @@ def person_schema():
         "jobTitle": "Principal — Chartered Construction Manager, Arbitrator, Adjudicator, Mediator and Party Wall Surveyor",
         "worksFor": {"@id": ORG_ID},
         "url": BASE + "/about/",
-        "image": BASE + "/assets/img/steve-campbell.jpg",
+        "image": BASE + "/assets/img/steve-campbell-2026.jpg",
         "memberOf": [
             {"@type": "Organization", "name": "Chartered Institute of Arbitrators", "url": "https://www.ciarb.org/"},
             {"@type": "Organization", "name": "Faculty of Party Wall Surveyors", "url": "https://www.fpws.org.uk/"},
