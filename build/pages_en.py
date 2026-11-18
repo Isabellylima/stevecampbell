@@ -537,7 +537,7 @@ def privacy():
 <h2>What we collect and why</h2>
 <p><strong>Newsletter.</strong> If you subscribe, we collect your name, email address and, optionally, your company. We use them only to send our newsletter, on the basis of your consent. Our CRM and email provider, HubSpot, stores your details and sends the newsletter on our behalf. Every email contains an unsubscribe link, and you can withdraw consent at any time.</p>
 <p><strong>Enquiries.</strong> If you use the contact form, we collect your name, email address, the details of your enquiry and, optionally, your phone number and organisation. These are stored in our CRM, HubSpot, so that we can respond to you and, if you instruct us, carry out the work — on the basis of our legitimate interests or to take steps towards a contract. Submitting an enquiry does not subscribe you to the newsletter.</p>
-<p><strong>Website operation.</strong> The site is hosted on Cloudflare, which processes technical data such as IP addresses to deliver the site securely. We do not use advertising or analytics cookies.</p>
+<p><strong>Website operation.</strong> The site is hosted on Cloudflare, which processes technical data such as IP addresses to deliver the site securely. We measure visits with Metricool web analytics, which counts page views anonymously without cookies and does not store IP addresses. We do not use advertising or analytics cookies.</p>
 <h2>How long we keep data</h2>
 <p>Newsletter data is kept until you unsubscribe. Enquiry and client records are kept for as long as needed for the matter and to meet legal and professional obligations.</p>
 <h2>Your rights</h2>

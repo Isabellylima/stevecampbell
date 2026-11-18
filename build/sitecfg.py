@@ -26,7 +26,7 @@ ICONS = {
 IMPLEMENT_URL = "https://heyimplement.com/"
 
 POSTNOMS = "DipAdj FCIArb FFPWS MCIOB"
-VERSION = "20261118b"
+VERSION = "20261118c"
 
 ORG_ID = BASE + "/#organization"
 PERSON_ID = BASE + "/#steve-campbell"
@@ -371,6 +371,8 @@ def layout(*, lang, path, title, description, body, alternates=None, schemas=(),
 {popup(lang)}
 {footer(lang)}
 <script src="/assets/js/site.js?v={VERSION}" defer></script>
+<!-- Metricool web analytics (cookieless) -->
+<script>function loadScript(a){{var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}}loadScript(function(){{beTracker.t({{hash:"9a57335884b44fb6e9cb9e19b0d10d4b"}})}});</script>
 </body>
 </html>
 '''

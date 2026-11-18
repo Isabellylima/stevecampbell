@@ -225,7 +225,7 @@ def privacidade():
 <h2>Que dados recolhemos e para quê</h2>
 <p><strong>Newsletter.</strong> Se subscrever, recolhemos o seu nome, e-mail e, opcionalmente, a empresa, que usamos apenas para enviar a newsletter, com base no seu consentimento. O nosso fornecedor de CRM e e-mail, HubSpot, armazena os seus dados e envia a newsletter em nosso nome. Todos os e-mails incluem um link para cancelar a subscrição e pode retirar o consentimento a qualquer momento.</p>
 <p><strong>Pedidos de contacto.</strong> Se usar o formulário de contacto, recolhemos o seu nome, e-mail, os detalhes do pedido e, opcionalmente, o telefone e a empresa. Estes dados ficam guardados no nosso CRM, HubSpot, para lhe respondermos e, se nos contratar, realizarmos o trabalho. Enviar um pedido não o inscreve na newsletter.</p>
-<p><strong>Funcionamento do site.</strong> O site está alojado na Cloudflare, que trata dados técnicos como endereços IP para o disponibilizar com segurança. Não usamos cookies de publicidade nem de análise.</p>
+<p><strong>Funcionamento do site.</strong> O site está alojado na Cloudflare, que trata dados técnicos como endereços IP para o disponibilizar com segurança. Medimos as visitas com o Metricool, que conta as páginas vistas de forma anónima, sem cookies e sem guardar endereços IP. Não usamos cookies de publicidade nem de análise.</p>
 <h2>Os seus direitos</h2>
 <p>Ao abrigo do RGPD e do UK GDPR, pode pedir acesso, retificação ou apagamento dos seus dados, opor-se ou limitar o tratamento e pedir a portabilidade. Pode também apresentar reclamação à Comissão Nacional de Proteção de Dados (cnpd.pt) ou, no Reino Unido, ao Information Commissioner's Office (ico.org.uk).</p>
 </div></section>'''
