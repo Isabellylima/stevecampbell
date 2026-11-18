@@ -27,14 +27,19 @@ Static, bilingual (en-GB / pt-PT) site for https://stevecampbellassociates.com, 
 - Build command: *(leave empty)*
 - Deploy command: `npx wrangler deploy`
 
-## Newsletter (HubSpot)
+## Forms (HubSpot)
 
-Sign-ups are sent to a HubSpot form via the Forms API (no API key needed). Set in Worker → Settings → Variables and Secrets:
+The newsletter box, the newsletter pop-up and the contact form send to HubSpot forms through the Forms API (no API key needed). If HubSpot is not configured yet, the contact form falls back to opening the visitor's email app.
+
+Set in Worker → Settings → Variables and Secrets:
 
 - `HUBSPOT_PORTAL_ID` — HubSpot account ID (Hub ID)
-- `HUBSPOT_FORM_ID` — GUID of the HubSpot form for English sign-ups (fields: email, firstname, company)
-- `HUBSPOT_FORM_ID_PT` (optional) — GUID of a separate form for Portuguese sign-ups
-- `HUBSPOT_SUBSCRIPTION_ID` (optional) — subscription type ID, only if the form has GDPR consent options enabled
+- `HUBSPOT_FORM_ID` — newsletter form GUID (fields: email, firstname, company)
+- `HUBSPOT_FORM_ID_PT` (optional) — separate newsletter form for Portuguese sign-ups
+- `HUBSPOT_CONTACT_FORM_ID` — contact form GUID (fields: email, firstname, phone, company, message)
+- `HUBSPOT_SUBSCRIPTION_ID` (optional) — marketing subscription type ID, only if the newsletter form has GDPR consent options enabled
+
+The pop-up opens on exit intent (desktop) or after 30 seconds, once per visitor (not again for 30 days after closing, never after subscribing), and never on the contact or privacy pages.
 
 ## SEO and AI discoverability
 

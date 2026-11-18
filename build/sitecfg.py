@@ -26,7 +26,7 @@ ICONS = {
 IMPLEMENT_URL = "https://heyimplement.com/"
 
 POSTNOMS = "DipAdj FCIArb FFPWS MCIOB"
-VERSION = "20261117b"
+VERSION = "20261118b"
 
 ORG_ID = BASE + "/#organization"
 PERSON_ID = BASE + "/#steve-campbell"
@@ -256,6 +256,40 @@ def newsletter(lang):
 </form></div></section>'''
 
 
+def popup(lang):
+    if lang == "en":
+        t = dict(eyebrow="Free e-book + newsletter", title="Practical notes on construction disputes",
+                 text="Join Steve's newsletter for occasional, practical guidance on adjudication, payment rules, arbitration and party wall procedure. No sales emails; unsubscribe at any time.",
+                 name="Name", email="Work email", consent='I agree to receive emails from Steve Campbell Associates and accept the <a href="/privacy/">privacy notice</a>.',
+                 button="Subscribe", close="Close", later="No thanks",
+                 after=f'While you wait, <a href="/e-book/">read Steve\'s free e-book</a>.')
+    else:
+        t = dict(eyebrow="E-book gratuito + newsletter", title="Notas práticas sobre litígios na construção",
+                 text="Subscreva a newsletter do Steve para receber, de vez em quando, orientações práticas sobre arbitragem, mediação, contratos e reclamações. Sem e-mails comerciais; pode cancelar a qualquer momento.",
+                 name="Nome", email="E-mail profissional", consent='Aceito receber e-mails da Steve Campbell Associates e li a <a href="/pt/privacidade/">política de privacidade</a>.',
+                 button="Subscrever", close="Fechar", later="Agora não",
+                 after='Entretanto, <a href="/pt/e-book/">leia o e-book gratuito do Steve</a>.')
+    return f'''<dialog class="nl-popup" id="nl-popup" aria-labelledby="pop-title">
+<div class="nl-popup-inner">
+<button type="button" class="nl-close" data-close aria-label="{t['close']}">×</button>
+<img src="/assets/img/crest-96.png" width="56" height="56" alt="" aria-hidden="true">
+<p class="eyebrow">{t['eyebrow']}</p>
+<h2 id="pop-title" tabindex="-1" autofocus>{t['title']}</h2>
+<p>{t['text']}</p>
+<form data-newsletter action="/api/subscribe" method="post" novalidate>
+<input type="hidden" name="placement" value="popup">
+<div class="field"><label for="pop-name">{t['name']}</label><input id="pop-name" name="name" type="text" autocomplete="name"></div>
+<div class="field"><label for="pop-email">{t['email']}</label><input id="pop-email" name="email" type="email" autocomplete="email" required></div>
+<div class="hp" aria-hidden="true"><label for="pop-web">Website</label><input id="pop-web" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+<div class="field"><label class="consent"><input type="checkbox" name="consent" value="yes" required> {t['consent']}</label></div>
+<div class="actions"><button class="btn" type="submit">{t['button']}</button><button type="button" class="btn ghost" data-close>{t['later']}</button></div>
+<p class="form-msg" role="status" aria-live="polite"></p>
+</form>
+<p data-after-subscribe hidden>{t['after']}</p>
+</div>
+</dialog>'''
+
+
 def footer(lang):
     social = '<div class="social">' + "".join(
         f'<a href="{u}" rel="me noopener" target="_blank" aria-label="Steve Campbell Associates on {n}" title="{n}">{ICONS[n]}</a>'
@@ -334,6 +368,7 @@ def layout(*, lang, path, title, description, body, alternates=None, schemas=(),
 {body}
 </main>
 {newsletter(lang)}
+{popup(lang)}
 {footer(lang)}
 <script src="/assets/js/site.js?v={VERSION}" defer></script>
 </body>

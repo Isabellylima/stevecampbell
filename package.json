@@ -1,6 +1,7 @@
 {
   "name": "stevecampbell",
   "private": true,
+  "type": "module",
   "description": "Steve Campbell Associates website — static site on Cloudflare Workers",
   "scripts": {
     "build": "python3 build/build.py",

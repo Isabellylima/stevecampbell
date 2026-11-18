@@ -193,7 +193,7 @@ def contacto():
 </div>
 <div>
 <h2>Enviar pedido</h2>
-<form data-contact>
+<form data-contact action="/api/contact" method="post">
 <div class="field"><label for="c-name">Nome</label><input id="c-name" name="name" type="text" autocomplete="name" required></div>
 <div class="field"><label for="c-email">E-mail</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
 <div class="field"><label for="c-phone">Telefone <span style="font-weight:400">(opcional)</span></label><input id="c-phone" name="phone" type="tel" autocomplete="tel"></div>
@@ -201,8 +201,10 @@ def contacto():
 <div class="field"><label for="c-topic">Assunto</label><select id="c-topic" name="topic">
 <option>Arbitragem</option><option>Mediação</option><option>Perito / peritagem</option><option>Reclamações / contratos</option><option>Gestão de projeto</option><option>Litígio no Reino Unido</option><option>Outro</option></select></div>
 <div class="field"><label for="c-msg">Descrição breve</label><textarea id="c-msg" name="message" required></textarea></div>
-<button class="btn" type="submit">Preparar e-mail</button>
-<p style="font-size:.86rem;color:var(--muted);margin-top:10px">Abre a sua aplicação de e-mail com o pedido pronto a enviar. Consulte a <a href="/pt/privacidade/">política de privacidade</a>.</p>
+<div class="hp" aria-hidden="true"><label for="c-web">Website</label><input id="c-web" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+<button class="btn" type="submit">Enviar pedido</button>
+<p class="form-msg" role="status" aria-live="polite"></p>
+<p style="font-size:.86rem;color:var(--muted);margin-top:10px">O seu pedido chega diretamente ao Steve e é tratado com confidencialidade. Consulte a <a href="/pt/privacidade/">política de privacidade</a>.</p>
 </form>
 </div>
 </div></section>'''
@@ -222,7 +224,7 @@ def privacidade():
 <p>Steve Campbell Associates, {ADDRESS["street"]}, {ADDRESS["locality"]}, {ADDRESS["region"]} {ADDRESS["postcode"]}, Reino Unido. Contacto: <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 <h2>Que dados recolhemos e para quê</h2>
 <p><strong>Newsletter.</strong> Se subscrever, recolhemos o seu nome, e-mail e, opcionalmente, a empresa, que usamos apenas para enviar a newsletter, com base no seu consentimento. O nosso fornecedor de CRM e e-mail, HubSpot, armazena os seus dados e envia a newsletter em nosso nome. Todos os e-mails incluem um link para cancelar a subscrição e pode retirar o consentimento a qualquer momento.</p>
-<p><strong>Pedidos de contacto.</strong> O formulário de contacto não nos envia dados diretamente — prepara um e-mail na sua própria aplicação. Quando nos contacta, usamos os seus dados para responder e, se nos contratar, para realizar o trabalho.</p>
+<p><strong>Pedidos de contacto.</strong> Se usar o formulário de contacto, recolhemos o seu nome, e-mail, os detalhes do pedido e, opcionalmente, o telefone e a empresa. Estes dados ficam guardados no nosso CRM, HubSpot, para lhe respondermos e, se nos contratar, realizarmos o trabalho. Enviar um pedido não o inscreve na newsletter.</p>
 <p><strong>Funcionamento do site.</strong> O site está alojado na Cloudflare, que trata dados técnicos como endereços IP para o disponibilizar com segurança. Não usamos cookies de publicidade nem de análise.</p>
 <h2>Os seus direitos</h2>
 <p>Ao abrigo do RGPD e do UK GDPR, pode pedir acesso, retificação ou apagamento dos seus dados, opor-se ou limitar o tratamento e pedir a portabilidade. Pode também apresentar reclamação à Comissão Nacional de Proteção de Dados (cnpd.pt) ou, no Reino Unido, ao Information Commissioner's Office (ico.org.uk).</p>

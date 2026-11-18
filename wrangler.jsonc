@@ -14,6 +14,6 @@
   "observability": { "enabled": true }
   // Custom domain: add stevecampbellassociates.com in the dashboard
   // (Worker → Settings → Domains & Routes) once the domain's DNS is on Cloudflare.
-  // Newsletter (HubSpot) — set in the dashboard: HUBSPOT_PORTAL_ID, HUBSPOT_FORM_ID
+  // Forms (HubSpot) — set in the dashboard: HUBSPOT_PORTAL_ID, HUBSPOT_FORM_ID, HUBSPOT_CONTACT_FORM_ID
   // Optional: HUBSPOT_FORM_ID_PT, HUBSPOT_SUBSCRIPTION_ID
 }

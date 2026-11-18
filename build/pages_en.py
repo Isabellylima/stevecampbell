@@ -505,7 +505,7 @@ def contact():
 </div>
 <div>
 <h2>Send an enquiry</h2>
-<form data-contact>
+<form data-contact action="/api/contact" method="post">
 <div class="field"><label for="c-name">Name</label><input id="c-name" name="name" type="text" autocomplete="name" required></div>
 <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
 <div class="field"><label for="c-phone">Phone <span style="font-weight:400">(optional)</span></label><input id="c-phone" name="phone" type="tel" autocomplete="tel"></div>
@@ -513,8 +513,10 @@ def contact():
 <div class="field"><label for="c-topic">Subject</label><select id="c-topic" name="topic">
 <option>Adjudication</option><option>Arbitration</option><option>Party wall</option><option>Mediation</option><option>Expert determination / ENE</option><option>Expert witness</option><option>Claims / consultancy</option><option>Project in Portugal</option><option>Other</option></select></div>
 <div class="field"><label for="c-msg">Brief outline</label><textarea id="c-msg" name="message" required></textarea></div>
-<button class="btn" type="submit">Prepare email</button>
-<p style="font-size:.86rem;color:var(--muted);margin-top:10px">This opens your email app with your enquiry ready to send. See our <a href="/privacy/">privacy notice</a>.</p>
+<div class="hp" aria-hidden="true"><label for="c-web">Website</label><input id="c-web" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+<button class="btn" type="submit">Send enquiry</button>
+<p class="form-msg" role="status" aria-live="polite"></p>
+<p style="font-size:.86rem;color:var(--muted);margin-top:10px">Your enquiry goes directly to Steve and is treated in confidence. See our <a href="/privacy/">privacy notice</a>.</p>
 </form>
 </div>
 </div></section>'''
@@ -534,7 +536,7 @@ def privacy():
 <p>Steve Campbell Associates, {ADDRESS["street"]}, {ADDRESS["locality"]}, {ADDRESS["region"]} {ADDRESS["postcode"]}, United Kingdom, is the controller of personal data collected through this website. Contact: <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 <h2>What we collect and why</h2>
 <p><strong>Newsletter.</strong> If you subscribe, we collect your name, email address and, optionally, your company. We use them only to send our newsletter, on the basis of your consent. Our CRM and email provider, HubSpot, stores your details and sends the newsletter on our behalf. Every email contains an unsubscribe link, and you can withdraw consent at any time.</p>
-<p><strong>Enquiries.</strong> The contact form does not send data to us directly — it prepares an email in your own email application. When you email or call us, we use your details to respond to your enquiry and, if you instruct us, to carry out the work, on the basis of our legitimate interests or to take steps towards a contract.</p>
+<p><strong>Enquiries.</strong> If you use the contact form, we collect your name, email address, the details of your enquiry and, optionally, your phone number and organisation. These are stored in our CRM, HubSpot, so that we can respond to you and, if you instruct us, carry out the work — on the basis of our legitimate interests or to take steps towards a contract. Submitting an enquiry does not subscribe you to the newsletter.</p>
 <p><strong>Website operation.</strong> The site is hosted on Cloudflare, which processes technical data such as IP addresses to deliver the site securely. We do not use advertising or analytics cookies.</p>
 <h2>How long we keep data</h2>
 <p>Newsletter data is kept until you unsubscribe. Enquiry and client records are kept for as long as needed for the matter and to meet legal and professional obligations.</p>
