@@ -1,3 +1,4 @@
+from urllib.parse import quote
 from sitecfg import *  # noqa
 
 PAPEIS = '''<div class="note"><p><strong>Nomeação independente ou representação de uma parte — nunca ambas.</strong> O Steve pode ser nomeado como decisor independente de um litígio (árbitro, mediador, perito) ou ser contratado para aconselhar e representar uma das partes. São funções distintas: em cada processo atua apenas numa delas e recusa qualquer instrução em que exista conflito de interesses.</p></div>'''
@@ -185,6 +186,7 @@ def contacto():
 <h2>Contactos</h2>
 <ul class="contact-list">
 <li><b>Telefone</b><a href="{PHONE_HREF}">{PHONE}</a></li>
+<li><b>WhatsApp</b><a href="https://wa.me/{WHATSAPP}?text={quote(WA_MSG['pt'])}" target="_blank" rel="noopener">Enviar mensagem ao Steve no WhatsApp</a></li>
 <li><b>E-mail</b><a href="mailto:{EMAIL}">{EMAIL}</a></li>
 <li><b>Escritório</b>{ADDRESS["street"]}<br>{ADDRESS["locality"]}, {ADDRESS["region"]} {ADDRESS["postcode"]}<br>Reino Unido</li>
 <li><b>LinkedIn</b><a href="{SOCIAL[0][1]}" rel="me noopener" target="_blank">Steve Campbell</a></li>

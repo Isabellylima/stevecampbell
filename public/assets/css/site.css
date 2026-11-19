@@ -237,3 +237,9 @@ button[disabled]{opacity:.6;cursor:wait}
 .prose blockquote{border-left:4px solid var(--purple-200);margin:1.4em 0;padding:4px 0 4px 18px;color:var(--muted);font-style:italic}
 .prose img{border-radius:8px;margin:1.4em 0}
 .author-box picture{flex:none;width:72px}
+/* WhatsApp button */
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;align-items:center;gap:8px;background:#25d366;color:#fff!important;text-decoration:none;font-weight:600;font-size:.95rem;padding:12px 16px 12px 14px;border-radius:999px;box-shadow:0 8px 22px rgba(0,0,0,.22)}
+.wa-float:hover{background:#1ebe5b}
+.wa-float svg{width:24px;height:24px;fill:#fff;flex:none}
+@media (max-width:600px){.wa-float{padding:13px;right:14px;bottom:14px}.wa-float span{display:none}}
+@media print{.wa-float{display:none}}

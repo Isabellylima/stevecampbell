@@ -1,3 +1,4 @@
+from urllib.parse import quote
 from sitecfg import *  # noqa
 
 
@@ -497,6 +498,7 @@ def contact():
 <h2>Get in touch</h2>
 <ul class="contact-list">
 <li><b>Telephone</b><a href="{PHONE_HREF}">{PHONE}</a></li>
+<li><b>WhatsApp</b><a href="https://wa.me/{WHATSAPP}?text={quote(WA_MSG['en'])}" target="_blank" rel="noopener">Message Steve on WhatsApp</a></li>
 <li><b>Email</b><a href="mailto:{EMAIL}">{EMAIL}</a></li>
 <li><b>Office</b>{ADDRESS["street"]}<br>{ADDRESS["locality"]}, {ADDRESS["region"]} {ADDRESS["postcode"]}<br>United Kingdom</li>
 <li><b>LinkedIn</b><a href="{SOCIAL[0][1]}" rel="me noopener" target="_blank">Steve Campbell</a></li>
